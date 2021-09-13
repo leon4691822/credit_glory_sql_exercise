@@ -4,7 +4,7 @@ SELECT
     SUM(IF(status=lead,1,0)) AS Leads,
     SUM(IF(status=prospect,1,0)) AS Prospects,
     SUM(IF(status=active,1,0)) AS Active,
-    SUM(IF(status=suspended,quantity,0)) AS Suspended,
+    SUM(IF(status=suspended,1,0)) AS Suspended,
     
 FROM
     (SELECT created_at,status 
